@@ -1,0 +1,23 @@
+white - F6F7F9;
+grey - AEAEB7;
+black - 020202;
+violet - 3C12BE;
+light violet - C9B9E7;
+dark grey - 5C5C5D;
+tint violet - 9470C6;
+
+
+<Routes >
+              <Route exact path="/News" element={<News/>} />
+              <Route exact path="/Exchanges" element={<Exchanges/>} />              
+              
+          </Routes >
+
+          bg-gradient-to-b from-indigo-200 to-neutral-200
+          bg-gradient-to-b from-indigo-200 to-neutral-200
+
+
+          <h1>name</h1>
+            <h1>price</h1>
+            <h1>marketCap</h1>
+            <h1>24h Change</h1>
