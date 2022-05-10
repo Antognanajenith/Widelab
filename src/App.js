@@ -8,11 +8,11 @@ import Exchanges from "./Components/Exchanges";
 function App() {
   return (
     <div className=" font-bold text-2xl ">
-      <div className="flex flex-row bg-lightgreyer">
+      <div className="flex md:flex-row flex-col ">
         <div className="flex basis-1/5">
           <Navbar><div>hello</div></Navbar>
         </div>
-        <div className="flex basis-4/5">
+        <div className="flex basis-4/5 bg-lightgreyer h-full">
           <Layout/>
         </div>
       </div>    

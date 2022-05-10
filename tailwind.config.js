@@ -17,6 +17,7 @@ module.exports = {
         darkgreyer:"#5C5C5D",
         tintvioleter:"#9470C6",
         lightgreyer:'#EFF1F5',
+        purplefoot:"#120B22",
       }
     },
   },

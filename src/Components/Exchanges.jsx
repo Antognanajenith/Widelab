@@ -1,10 +1,8 @@
 import React,{useState} from 'react';
-import {useGetCryptosQuery} from "../Services/Cryptoapione";
-import millify from "millify";
 
 const Exchanges = () => {
   return (
-    <div className='text-center'>Exchanges</div>
+    <div className='text-center text-red-500'>Exchanges</div>
   )
 }
 

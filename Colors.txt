@@ -21,3 +21,18 @@ tint violet - 9470C6;
             <h1>price</h1>
             <h1>marketCap</h1>
             <h1>24h Change</h1>
+
+
+            <div className="inline-flex gap-1 " role="group">
+               {time.map((timestamp)=>(
+                 <button defaultValue={timeperiod} key={timestamp} value={timestamp} onClick={(timestamp)=>settimeperiod(timestamp)}
+                 type="button" class="rounded-md px-5 py-2 border-2 border-greyer text-blacker font-medium text-xs  leading-tight
+                   uppercase hover:bg-violet-800 hover:bg-opacity-5 hover::text-violeter hover:border-violeter focus:outline-none focus:bg-violeter focus:text-whiter focus:border-violeter  transition duration-150 ease-in-out">
+                   {timestamp}
+               </button>
+               ))}             
+              </div>
+
+
+              Take full advantage of everything layer 2 has to offer on the digital currencies.particulars/informations from our aggregator/site has been driven from Coinranking api.
+               

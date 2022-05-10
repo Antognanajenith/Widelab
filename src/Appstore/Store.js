@@ -7,6 +7,6 @@ export default configureStore({
     reducer:{
         [cryptoApi.reducerPath]: cryptoApi.reducer,
         [Cryptonewsapi.reducerPath]:Cryptonewsapi.reducer,
-    
+        
     },
 });

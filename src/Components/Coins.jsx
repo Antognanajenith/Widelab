@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {useGetCryptosQuery} from "../Services/Cryptoapione";
 import millify from "millify";
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
 
 const Coins = ({simplified}) => {
   const displaycount = simplified ? 10 :100;
@@ -23,9 +24,9 @@ const Coins = ({simplified}) => {
   return (
     <>
     {!simplified && (
-      <div className='flex flex-row justify-between items-center mt-6 mx-4 mb-4'>
-      <h1 className='text-start text-whiter1  text-4xl'>Cryptocurrencies</h1>
-      <div className="flex justify-center">
+      <div className='flex md:flex-row flex-col justify-between items-center mt-4 mx-4 mb-4'>
+      <h1 className='text-start text-whiter1 mt-2 text-4xl'>Cryptocurrencies</h1>
+      <div className="flex justify-center mt-2">
         <div className="mb-3 xl:w-96">
           <input
             type="search"
@@ -65,19 +66,18 @@ const Coins = ({simplified}) => {
     </div>
     { cryptos?.map((currency)=>(
  
-      <div key={currency.uuid} className='flex flex-row justify-between items-center w-full h-14 rounded-md bg-whiter hover:drop-shadow-2xl transition ease-in-out  duration-450 px-4 font-medium text-xl'>
+      <div key={currency.uuid} className='flex flex-row justify-between items-center w-full h-14 rounded-md bg-whiter hover:drop-shadow-2xl transition ease-in-out  duration-450 px-4 md:font-medium font-normal md:text-xl text-lg'>
        
-       <Link className='basis-1/4 ' to={`/Extra/${currency.uuid}`}><div className='flex flex-row items-center space-x-1'><h1 >{currency.rank}.</h1><h1>{currency.name}</h1><img className='h-5 w-5 ' src={currency.iconUrl}/></div></Link>
+       <Link className='basis-1/4 ' to={`/Extra/${currency.uuid}`}><div className='flex flex-row items-center space-x-2'><img className='h-5 w-5  ' src={currency.iconUrl}/><h1>{currency.name}</h1></div></Link>
           <h1>{millify(currency.price)}</h1>
           <h1>{millify(currency.marketCap)}</h1>
-          <h1>{millify(currency.change)}%</h1>
-       
-         
+          <h1>{millify(currency.change)}%</h1> 
       </div> 
     ))}
       
       
-  </div></>
+  </div>
+  {!simplified && ( <Footer/>)}</>
     
   )
 }
